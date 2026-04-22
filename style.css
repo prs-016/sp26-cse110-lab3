@@ -58,4 +58,56 @@ h2 {
 nav a {
   color: hsla(210, 100%, 40%, 1); /* HSLA Color */
   text-decoration: none;
+  display: inline-block; /* Display inline-block */
+}
+
+/* --- Issue 4: Sizing, Layout, and Display --- */
+
+header {
+  position: sticky; /* Position: sticky */
+  top: 0;
+  z-index: 100;
+}
+
+footer {
+  position: relative; /* Position: relative */
+  height: 80px; /* Sizing: height */
+  width: 100%; /* Sizing: width */
+}
+
+/* Sizing: max-width and min-width */
+/* Display: none */
+.hidden-example {
+  display: none; 
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Flexbox Layout */
+/* Requirement: >2 children, 3 attributes minimum */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Grid Layout */
+/* Requirement: >2 children, 3 attributes minimum */
+ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  justify-items: start;
+}
+
+/* Responsiveness - Media Query */
+@media (max-width: 600px) {
+  ul {
+    grid-template-columns: 1fr; /* Stack grid to reflow */
+  }
+  
+  nav {
+    flex-direction: column; /* Stack flex items */
+  }
 }
