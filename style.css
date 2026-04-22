@@ -1,3 +1,61 @@
-/* External CSS Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Note: Empty for now, will be populated in future issues */
+:root {
+  /* CSS Variables with fallback example applied below */
+  --theme-primary: color(display-p3 0.8 0.1 0.1); 
+  --theme-secondary: #0044cc; /* Hex code */
+}
+
+body {
+  /* Background Color and CSS Variable Fallback */
+  background-color: var(--main-bg, rgb(245, 245, 245)); /* RGB Color */
+  color: hsl(0, 0%, 15%); /* HSL Color, Text color property */
+  font-family: 'Roboto', sans-serif; /* 3rd party web font */
+  
+  /* Box model padding shorthand (Using relative units: rem, vw) */
+  padding: 1rem 2vw 1rem 2vw; 
+}
+
+main {
+  /* Margin auto shorthand */
+  margin: auto;
+  max-width: 800px; /* Absolute unit: px */
+  
+  /* Box model margin longhand */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  /* background-color using color-mix and Color Names (orange) */
+  background-color: color-mix(in srgb, orange 80%, white); 
+  
+  /* Box model padding longhand (Using relative unit: em) */
+  padding-top: 15px; 
+  padding-bottom: 15px;
+  padding-left: 2em; 
+  padding-right: 2em;
+  
+  /* Border properties (Using absolute unit: pt) */
+  border-style: solid;
+  border-width: 2pt; 
+  border-color: var(--theme-secondary);
+  border-radius: 12px;
+}
+
+h2 {
+  text-align: left; /* text-align property */
+  text-decoration: underline; /* text-decoration property */
+  
+  /* Absolute unit: in */
+  border-bottom-width: 0.05in; 
+  border-bottom-style: dashed;
+  border-bottom-color: rgba(100, 100, 100, 0.5); /* RGBA Color */
+}
+
+nav a {
+  color: hsla(210, 100%, 40%, 1); /* HSLA Color */
+  text-decoration: none;
+}
