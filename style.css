@@ -111,3 +111,87 @@ ul {
     flex-direction: column; /* Stack flex items */
   }
 }
+
+/* --- Issue 5: Modern Selectors --- */
+
+/* Universal Selector */
+* {
+  box-sizing: border-box;
+}
+
+/* ID Selector */
+#business {
+  padding: 10px;
+}
+
+/* Class Selector */
+.highlight-text {
+  background-color: yellow;
+}
+
+/* Element Selector */
+p {
+  line-height: 1.6;
+}
+
+/* Attribute Selector */
+input[type="text"] {
+  border: 1px solid #ccc;
+}
+
+/* Pseudo-class Selector */
+button:hover {
+  background-color: lightgrey;
+}
+button:active {
+  transform: scale(0.98);
+}
+
+/* Selector List */
+h1, h3, h4 {
+  margin-top: 0.5em;
+}
+
+/* Descendant Combinator */
+fieldset legend {
+  font-weight: bold;
+}
+
+/* Child Combinator */
+nav > a {
+  padding: 5px;
+}
+
+/* General Sibling Combinator */
+label ~ br {
+  display: block;
+}
+
+/* Adjacent Sibling Combinator */
+input + label {
+  margin-left: 5px;
+}
+
+/* Combining Two Selectors */
+h2.highlight-text {
+  color: red;
+}
+
+/* New Selector: :has() */
+section:has(audio) {
+  border: 2px solid green;
+  padding: 10px;
+}
+
+/* New Selector: Nested Selectors */
+#media {
+  background-color: #f9f9f9;
+  
+  & h2 {
+    color: darkblue;
+  }
+  
+  & video {
+    border-radius: 8px;
+  }
+}
